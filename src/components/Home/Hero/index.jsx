@@ -8,7 +8,7 @@ const Hero = () => {
 			<div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pt-20'>
 				<div className='grid grid-cols-1 lg:grid-cols-12 space-x-1 items-center'>
 					<div className='col-span-6 flex flex-col gap-8 '>
-						<div className='flex gap-2 mx-auto lg:mx-0'>
+						{/* <div className='flex gap-2 mx-auto lg:mx-0'>
 							<Icon
 								icon='solar:verified-check-bold'
 								className='text-success text-xl inline-block me-2'
@@ -16,23 +16,22 @@ const Hero = () => {
 							<p className='text-success text-sm font-semibold text-center lg:text-start'>
 								Get 30% off on first enroll
 							</p>
-						</div>
-						<h1 className='text-midnight_text text-4xl sm:text-5xl font-semibold pt-5 lg:pt-0'>
+						</div> */}
+						<h1 className='text-primary text-4xl sm:text-5xl font-semibold pt-5 lg:pt-0'>
 							Training holistic healthcare givers with moral integrity.
 						</h1>
 						<h3 className='text-black/70 text-lg pt-5 lg:pt-0'>
 							Our cutting-edge curriculum and hands-on clinical training prepare
 							you to provide compassionate, expert care in modern healthcare.
 						</h3>
-						<div className='relative rounded-full pt-5 lg:pt-0'>
+						<div className='relative rounded-full pt-5 lg:pt-0 focus-within:outline focus-within:outline-2 focus-within:outline-secondary'>
 							<input
-								type='Email address'
-								name='q'
+								id='query'
 								className='py-6 lg:py-8 pl-8 pr-20 text-lg w-full text-black rounded-full focus:outline-none shadow-input-shadow'
 								placeholder='search courses...'
 								autoComplete='off'
 							/>
-							<button className='bg-secondary p-5 rounded-full absolute right-2 top-2 '>
+							<button className='bg-primary p-5 rounded-full absolute right-2 top-2 '>
 								<Icon
 									icon='solar:magnifer-linear'
 									className='text-white text-4xl inline-block'

@@ -15,9 +15,7 @@
 					'5.54348px 38.8043px 110.87px rgba(89,104,118,.15)',
 			},
 			colors: {
-				// Primary theme color switched to a slightly darker green
 				primary: '#16a34a',
-				// Secondary as a darker green complement
 				secondary: '#14532d',
 				grey: '#57595f',
 				slateGray: '#f6faff',
