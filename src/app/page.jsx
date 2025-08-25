@@ -1,24 +1,24 @@
-﻿import React from "react";
-import Hero from "@/components/Home/Hero";
-import Companies from "@/components/Home/Companies";
-import Courses from "@/components/Home/Courses";
-import Mentor from "@/components/Home/Mentor";
-import Testimonial from "@/components/Home/Testimonials";
-import Newsletter from "@/components/Home/Newsletter";
-import { Metadata } from "next";
+﻿import React from 'react';
+import Hero from '@/components/Home/Hero';
+import Companies from '@/components/Home/Companies';
+import Courses from '@/components/Home/Courses';
+import Mentor from '@/components/Home/Mentor';
+import Testimonial from '@/components/Home/Testimonials';
+import Newsletter from '@/components/Home/Newsletter';
+import { Metadata } from 'next';
 export const metadata = {
-  title: "St. Thomas College of Nursing & Midwifery",
+	title: 'St. Thomas Higher Institute of Nursing and Biomedical Sciences, Buea - Cameroon',
 };
 
 export default function Home() {
-  return (
-    <main>
-      <Hero />
-      <Companies />
-      <Courses />
-      <Mentor />
-      <Testimonial />
-      <Newsletter />
-    </main>
-  );
+	return (
+		<main>
+			<Hero />
+			<Companies />
+			<Courses />
+			<Mentor />
+			<Testimonial />
+			<Newsletter />
+		</main>
+	);
 }

@@ -1,0 +1,14 @@
+.animate-slide-in {
+	animation: in-slide 0.8s ease-in-out forwards;
+}
+
+@keyframes in-slide {
+	0% {
+		transform: translate(100px, 20px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}

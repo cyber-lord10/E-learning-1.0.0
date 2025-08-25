@@ -1,11 +1,19 @@
-﻿import Image from 'next/image';
+﻿'use client';
+import Image from 'next/image';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { getImagePrefix } from '@/utils/util';
+import { useRef } from 'react';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+import './index.css';
 
 const Hero = () => {
+	const imgRef = useRef(null);
+
+	useIntersectionObserver(imgRef, { rootMargin: '-50px' });
+
 	return (
 		<section id='home-section' className='bg-slateGray'>
-			<div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md px-4 pt-20'>
+			<div className='container mx-auto lg:max-w-screen-xl md:max-w-screen-md pl-4 lg:pl-16 pr-4 pt-20'>
 				<div className='grid grid-cols-1 lg:grid-cols-12 space-x-1 items-center'>
 					<div className='col-span-6 flex flex-col gap-8 '>
 						{/* <div className='flex gap-2 mx-auto lg:mx-0'>
@@ -24,14 +32,14 @@ const Hero = () => {
 							Our cutting-edge curriculum and hands-on clinical training prepare
 							you to provide compassionate, expert care in modern healthcare.
 						</h3>
-						<div className='relative rounded-full pt-5 lg:pt-0 focus-within:outline focus-within:outline-2 focus-within:outline-secondary'>
+						<div className='relative rounded-full focus-within:outline focus-within:outline-2 focus-within:outline-primary'>
 							<input
 								id='query'
 								className='py-6 lg:py-8 pl-8 pr-20 text-lg w-full text-black rounded-full focus:outline-none shadow-input-shadow'
 								placeholder='search courses...'
 								autoComplete='off'
 							/>
-							<button className='bg-primary p-5 rounded-full absolute right-2 top-2 '>
+							<button className='bg-primary p-5 rounded-full absolute right-0 lg:top-2 lg:right-2'>
 								<Icon
 									icon='solar:magnifer-linear'
 									className='text-white text-4xl inline-block'
@@ -79,6 +87,7 @@ const Hero = () => {
 					</div>
 					<div className='col-span-6 flex justify-center'>
 						<Image
+							className='hidden'
 							src={`${getImagePrefix()}images/banner/hero.png`}
 							alt='nothing'
 							width={1000}
